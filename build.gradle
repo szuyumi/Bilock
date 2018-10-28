@@ -1,0 +1,52 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")
+                    && !requested.name.startsWith("exifinterface")) {
+                details.useVersion '24.2.1'
+                //不设置24.2.1但是设置到了25就找不到布局，全部不管好像又冲突设置24.2.1 那么 要么冲突 要么       java.lang.NoSuchFieldError: No field notification_template_lines of type
+            }
+        }
+    }
+}
+
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://dl.bintray.com/wangyuwei/maven'
+        }
+        maven { url 'https://maven.google.com' }
+        maven {
+            url 'http://search.maven.org/#artifactdetails%7Cuk.me.berndporr%7Ciirj%7C1.1%7Cjar'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

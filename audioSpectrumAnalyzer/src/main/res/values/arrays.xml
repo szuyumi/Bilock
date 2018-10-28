@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="dbRangeArray">
+        <item>-30</item>
+        <item>-60</item>
+        <item>-90</item>
+        <item>-120</item>
+        <item>-150</item>
+    </string-array>
+    <string-array name="spectrogram_duration_array">
+        <item>2.0</item>
+        <item>4.0</item>
+        <item>6.0</item>
+        <item>8.0</item>
+        <item>10.0</item>
+    </string-array>
+    <string-array name="wnd_func_names">
+        <item>Rectangular</item>
+        <item>Bartlett</item>
+        <item>Hanning</item>
+        <item>Blackman</item>
+        <item>Blackman Harris</item>
+        <item>Kaiser, a=2.0</item>
+        <item>Kaiser, a=3.0</item>
+        <item>Kaiser, a=4.0</item>
+    </string-array>
+    <string-array name="audio_source">
+        <item>VOICE_RECOGNITION</item>
+        <item>DEFAULT</item>
+        <item>MIC</item>
+        <item>VOICE_UPLINK</item>
+        <item>VOICE_DOWNLINK</item>
+        <item>VOICE_CALL</item>
+        <item>CAMCORDER</item>
+        <item>test signal 1\n\t 440Hz @ -6dB</item>
+        <item>test signal 2\n\t 625Hz @ -6dB\n +1875Hz @ -12dB</item>
+        <item>white noise</item>
+    </string-array>
+    <string-array name="audio_source_id">
+        <item>6</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>1000</item>
+        <item>1001</item>
+        <item>1002</item>
+    </string-array>
+    <string name="audio_source_id_default">6</string>
+    <string-array name="sample_rates">
+        <item>SAMPLE/S::0</item>
+        <item>8000::8000</item>
+        <item>11025::11025</item>
+        <item>16000::16000</item>
+        <item>22050::22050</item>
+        <item>32000::32000</item>
+        <item>44100::44100</item>
+        <item>48000::48000</item>
+    </string-array>
+    <string-array name="fft_len">
+        <item>FFT LEN::0</item>
+        <item>512::512</item>
+        <item>1024::1024</item>
+        <item>2048::2048</item>
+        <item>4096::4096</item>
+        <item>8192::8192</item>
+    </string-array>
+    <string-array name="fft_ave_num">
+        <item>N AVE::0</item>
+        <item>1::1</item>
+        <item>2::2</item>
+        <item>4::4</item>
+        <item>8::8</item>
+        <item>16::16</item>
+    </string-array>
+
+</resources>

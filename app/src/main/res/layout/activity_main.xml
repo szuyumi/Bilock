@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.domin.bilock.MainActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<fragment-->
+            <!--android:id="@+id/wave"-->
+            <!--android:name="github.bewantbe.audio_analyzer_for_android.AnalyzeActivity"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="374dp"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:elevation="1dp"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/linearLayout"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintVertical_chainStyle="spread_inside"-->
+
+            <!--/>-->
+        <!--app:wvCenterLineColor="@color/colorPrimaryDark"-->
+        <!--app:wvCenterLineWidth="1dp"-->
+        <!--app:wvLineColor="@color/colorPrimary"-->
+        <!--app:wvLineSpace="0.0000000001px"-->
+        <!--app:wvLineWidth="0.1px"-->
+        <!--app:wvType="centerLine" -->
+
+        <!--<com.chrischen.waveview.WaveView-->
+        <!--android:id="@+id/wave"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="250dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:elevation="1dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:wvCenterLineColor="@color/colorPrimaryDark"-->
+        <!--app:wvCenterLineWidth="1dp"-->
+        <!--app:wvLineColor="@color/colorPrimary"-->
+        <!--app:wvLineSpace="0.0000000001px"-->
+        <!--app:wvLineWidth="0.1px"-->
+        <!--app:wvType="centerLine" />-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/bt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:text="测试数据"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="82dp">
+
+                <TextView
+                    android:id="@+id/mode_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/layout_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_text">
+
+            <Button
+                android:id="@+id/bt_svm_train"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="SVM训练" />
+
+            <Button
+                android:id="@+id/button_clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="TrainData" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

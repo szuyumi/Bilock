@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bilock.iml" filepath="$PROJECT_DIR$/Bilock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FFTLibrary/FFTLibrary.iml" filepath="$PROJECT_DIR$/FFTLibrary/FFTLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MFCC/MFCC.iml" filepath="$PROJECT_DIR$/MFCC/MFCC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audioSpectrumAnalyzer/audioSpectrumAnalyzer.iml" filepath="$PROJECT_DIR$/audioSpectrumAnalyzer/audioSpectrumAnalyzer.iml" />
+    </modules>
+  </component>
+</project>

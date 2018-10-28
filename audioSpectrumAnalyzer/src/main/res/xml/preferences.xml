@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="keepScreenOn"
+        android:title="Keep screen on" />
+
+    <ListPreference
+        android:defaultValue="@string/audio_source_id_default"
+        android:entries="@array/audio_source"
+        android:entryValues="@array/audio_source_id"
+        android:key="audioSource"
+        android:summary="Audio source for spectrum"
+        android:title="Audio source" />
+    <ListPreference
+        android:defaultValue="Hanning"
+        android:entries="@array/wnd_func_names"
+        android:entryValues="@array/wnd_func_names"
+        android:key="windowFunction"
+        android:summary="Window function for STFT"
+        android:title="Window Function" />
+
+    <PreferenceCategory
+        android:key="spectrumAppearance"
+        android:title="Spectrum appearance" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="showLines"
+            android:summary="Use lines instead of bars (area) for spectrum"
+            android:title="Spectrum use lines" />
+
+        <ListPreference
+            android:defaultValue="-120"
+            android:entries="@array/dbRangeArray"
+            android:entryValues="@array/dbRangeArray"
+            android:key="spectrumRange"
+            android:summary="Show range of spectrum in dB"
+            android:title="Spectrum range" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="spectrogramAppearance"
+        android:title="Spectrogram appearance" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="spectrogramShifting"
+            android:summary="Make whole spectrogram shifting as time go"
+            android:title="Spectrogram shifting" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="spectrogramTimeAxis"
+            android:title="Show time axis" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="spectrogramShowFreqAlongX"
+            android:summary="So time axis is Y axis"
+            android:title="Frequency as X axis" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="spectrogramSmoothRender"
+            android:summary="Smooth render the spectrogram"
+            android:title="Smooth render" />
+        
+        <ListPreference
+            android:defaultValue="-120"
+            android:entries="@array/dbRangeArray"
+            android:entryValues="@array/dbRangeArray"
+            android:key="spectrogramRange"
+            android:summary="Show range of spectrogram in dB"
+            android:title="Spectrogram range" />
+        <ListPreference
+            android:defaultValue="6.0"
+            android:entries="@array/spectrogram_duration_array"
+            android:entryValues="@array/spectrogram_duration_array"
+            android:key="spectrogramDuration"
+            android:summary="Duration of spectrogram shown (when average number is 1)"
+            android:title="Spectrogram duration" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="miscellaneous"
+        android:title="Miscellaneous" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="warnOverrun"
+            android:summary="Show a warning if audio buffer keep overrun."
+            android:title="Ovrrun Warning" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
